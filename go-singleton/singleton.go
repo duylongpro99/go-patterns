@@ -1,5 +1,7 @@
 package singleton
 
+// # Concurrency-safe Version #
+
 import "sync"
 
 type ConfigManager struct {

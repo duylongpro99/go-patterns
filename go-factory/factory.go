@@ -1,5 +1,7 @@
 package factory
 
+// # Abstract Factory Pattern #
+
 import "fmt"
 
 type PaymentProcessor interface {

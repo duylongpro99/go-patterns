@@ -1,8 +1,8 @@
 # Pattern Definition
 -   Define 1-to-many relationship between objects
 -   Automatically notify all observers when the state of the subject changes
--   Belongs to the Behavioral Pattern category
--   Suitable for event driven scenarios
+-   Belongs to the **Behavioral Pattern** category
+-   Suitable for *event driven* scenarios
 
 # Core features
 -   **Event-driven**: The change of subject state triggers the update of the observers

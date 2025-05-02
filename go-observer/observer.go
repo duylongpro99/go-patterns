@@ -1,5 +1,7 @@
 package observer
 
+// # Event driven Model #
+
 import "fmt"
 
 type Observer interface {

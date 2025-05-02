@@ -2,8 +2,8 @@
 
 - Only one instance of a class is created globally.
 - One unified access point
-- Belongs to creational pattern
-- Suitable for situations where global unique control is required.
+- Belongs to the **Creational Pattern** category
+- Suitable for situations where *global unique control* is required.
 
 # Core features
 
