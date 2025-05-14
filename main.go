@@ -7,6 +7,7 @@ import (
 	"cris92.com/go-patterns/go-factory"
 	"cris92.com/go-patterns/go-observer"
 	"cris92.com/go-patterns/go-singleton"
+	"cris92.com/go-patterns/go-strategy"
 )
 
 func main() {
@@ -61,5 +62,21 @@ func main() {
 	fmt.Println("End testing Decorator Pattern...")
 
 	fmt.Println("\n")
+	fmt.Println("Start testing Strategy Pattern...")
+	percentStratery := strategy.PercentageDiscount{
+		Rate: 0.2,
+	}
+	fixedDiscountStrategy := strategy.FixedDiscount{
+		Offset: 50,
+	}
+	var amount float64 = 100
+	checkout := strategy.CheckoutContext{}
+	checkout.SetStrategy(&percentStratery)
+	amount = checkout.Strategy.Calculate(amount)
+	fmt.Printf("Amount after percentage checkout: %.2f$ \n", amount)
+	checkout.SetStrategy(&fixedDiscountStrategy)
+	amount = checkout.Strategy.Calculate(amount)
+	fmt.Printf("Amount after fixed amount checkout: %.2f$ \n", amount)
+	fmt.Println("End testing Strategy Pattern...")
 
 }
